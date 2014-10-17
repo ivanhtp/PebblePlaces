@@ -1,0 +1,66 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "Sobaceru Inc.",
+    "longName": "Pebble Places",
+    "projectType": "pebblejs",
+    "resources": {
+        "media": [
+            {
+                "file": "images/menu_icon.png",
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/logo_splash.png",
+                "name": "IMAGE_LOGO_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "fonts/UbuntuMono-Regular.ttf",
+                "name": "MONO_FONT_14",
+                "type": "font"
+            },
+            {
+                "file": "images/shopping.png",
+                "name": "IMAGES_SHOPPING_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/restaurant.png",
+                "name": "IMAGES_RESTAURANT_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/logo.png",
+                "menuIcon": true,
+                "name": "IMAGES_LOGO_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/hotel.png",
+                "name": "IMAGES_HOTEL_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/cinema.png",
+                "name": "IMAGES_CINEMA_PNG",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "Places",
+    "uuid": "1f2bc22e-80bf-4b03-b119-097e5daa17c6",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
