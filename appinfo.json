@@ -29,13 +29,13 @@
                 "type": "font"
             },
             {
-                "file": "images/shopping.png",
-                "name": "IMAGES_SHOPPING_PNG",
+                "file": "images/cinema.png",
+                "name": "IMAGES_CINEMA_PNG",
                 "type": "png"
             },
             {
-                "file": "images/restaurant.png",
-                "name": "IMAGES_RESTAURANT_PNG",
+                "file": "images/hotel.png",
+                "name": "IMAGES_HOTEL_PNG",
                 "type": "png"
             },
             {
@@ -45,13 +45,13 @@
                 "type": "png"
             },
             {
-                "file": "images/hotel.png",
-                "name": "IMAGES_HOTEL_PNG",
+                "file": "images/restaurant.png",
+                "name": "IMAGES_RESTAURANT_PNG",
                 "type": "png"
             },
             {
-                "file": "images/cinema.png",
-                "name": "IMAGES_CINEMA_PNG",
+                "file": "images/shopping.png",
+                "name": "IMAGES_SHOPPING_PNG",
                 "type": "png"
             }
         ]

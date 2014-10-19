@@ -1,13 +1,16 @@
 /**
- * Welcome to Pebble.js!
- *
- * This is where you write your app.
+ * Pebble Places
+ * v0.0.1
+ * Developed by Ivan Henrique Tavares Pauletti
+ * ivanpauletti@gmail.com.br | @ivanhtp
  */
 
 var UI = require('ui');
 var Vector2 = require('vector2');
 var ajax = require('ajax');
 
+
+// Main menu
 var main = new UI.Menu({
     sections: [{
       items: [{
@@ -32,16 +35,14 @@ var main = new UI.Menu({
 
 main.show();
 
+// Listing Places of type...
 main.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
-    console.log('Preparing Google Maps API request...');
     var loading = new UI.Window();
     var textfield = new UI.Text({
       position: new Vector2(0, 50),
       size: new Vector2(144, 30),
       font: 'gothic-24-bold',
-      text: 'Searching!',
+      text: 'Searching...',
       textAlign: 'center'
     });
     loading.add(textfield);
@@ -51,6 +52,7 @@ main.on('select', function(e) {
     foursquareURI += "client_id=LIK1ATUFCZDW3KVWBJDCFPDIYIWECW10LUNDMR1D2TYJT2TD&client_secret=H1ZAKUDN5CUWYP5SF1G31OG4EVJ4SZATWRFTYRIC10DG1JOR&";
     foursquareURI += "v=20130815%20&ll=-23.6,-46.6&";
     foursquareURI += "limit=10";
+  foursquareURI += "query=";
   
     ajax(
       {
@@ -59,6 +61,8 @@ main.on('select', function(e) {
       },
       function(data) {
         var placeList = new UI.Menu({
+          
+          // Show top 5 places
           sections: [{
             items: [{
               title: data.response.venues[0].name,
@@ -80,12 +84,17 @@ main.on('select', function(e) {
               subtitle: data.response.venues[5].location.distance+' meters away.'
             }]
           }]
+          
         });
         
+        // Change view
+        loading.show();   
         placeList.show();
       },
       function(error) {
-        console.log('The ajax request failed: ' + error);
+        textfield.text = "Connection problem. Please try again later";
+        loading.add(textfield);
+        loading.show();   
       }
     );
   
